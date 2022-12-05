@@ -1,211 +1,401 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk" />
     <title>Payroll Management System</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="main.dart.js"></script>
-    
-</head>
+  </head>
 
-<body>
-  <div class="container">
-    <div id="output"></div>
-    <h2>A Payroll Management System</h2>
-    <p>Attendance Sheet Monthly:</p>                                                                                      
-    <div class="table-responsive">          
-    <table class="table table-striped table-hover table-bordered">
-      <thead>
-        <tr>
-          <th style="width:120px;"># Day</th>
-          <th>Start Time:</th>
-          <th>End Time:</th>
-          <th style="text-align: right;">Hours</th>
-          <th style="text-align: right;">Minutes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1st</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-1" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-1" /></td>
-          <td style="text-align: right;"><div id="hours-1"></div></td>
-          <td style="text-align: right;"><div id="minutes-1"></div></td>
-        </tr>
-        <tr>
-          <td>2nd</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-2" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-2" /></td>
-          <td style="text-align: right;"><div id="hours-2"></div></td>
-          <td style="text-align: right;"><div id="minutes-2"></div></td>
-        </tr>
-        <tr>
-          <td>3rd</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-3" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-3" /></td>
-          <td style="text-align: right;"><div id="hours-3"></div></td>
-          <td style="text-align: right;"><div id="minutes-3"></div></td>
-        </tr>
-        <tr>
-          <td>4th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-4" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-4" /></td>
-          <td style="text-align: right;"><div id="hours-4"></div></td>
-          <td style="text-align: right;"><div id="minutes-4"></div></td>
-        </tr>
-        <tr>
-          <td>5th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-5" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-5" /></td>
-          <td style="text-align: right;"><div id="hours-5"></div></td>
-          <td style="text-align: right;"><div id="minutes-5"></div></td>
-        </tr>
-        <tr>
-          <td>6th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-6" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-6" /></td>
-          <td style="text-align: right;"><div id="hours-6"></div></td>
-          <td style="text-align: right;"><div id="minutes-6"></div></td>
-        </tr>
-        <tr>
-          <td>7th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-7" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-7" /></td>
-          <td style="text-align: right;"><div id="hours-7"></div></td>
-          <td style="text-align: right;"><div id="minutes-7"></div></td>
-        </tr>
-        <tr>
-          <td>8th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-8" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-8" /></td>
-          <td style="text-align: right;"><div id="hours-8"></div></td>
-          <td style="text-align: right;"><div id="minutes-8"></div></td>
-        </tr>
-        <tr>
-          <td>9th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-9" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-9" /></td>
-          <td style="text-align: right;"><div id="hours-9"></div></td>
-          <td style="text-align: right;"><div id="minutes-9"></div></td>
-        </tr>
-        <tr>
-          <td>10th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-10" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-10" /></td>
-          <td style="text-align: right;"><div id="hours-10"></div></td>
-          <td style="text-align: right;"><div id="minutes-10"></div></td>
-        </tr>
-        <tr>
-          <td>11th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-11" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-11" /></td>
-          <td style="text-align: right;"><div id="hours-11"></div></td>
-          <td style="text-align: right;"><div id="minutes-11"></div></td>
-        </tr>
-        <tr>
-          <td>12th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-12" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-12" /></td>
-          <td style="text-align: right;"><div id="hours-12"></div></td>
-          <td style="text-align: right;"><div id="minutes-12"></div></td>
-        </tr>
-        <tr>
-          <td>13th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-13" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-13" /></td>
-          <td style="text-align: right;"><div id="hours-13"></div></td>
-          <td style="text-align: right;"><div id="minutes-13"></div></td>
-        </tr>
-        <tr>
-          <td>14th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-14" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-14" /></td>
-          <td style="text-align: right;"><div id="hours-14"></div></td>
-          <td style="text-align: right;"><div id="minutes-14"></div></td>
-        </tr>
-        <tr>
-          <td>15th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-15" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-15" /></td>
-          <td style="text-align: right;"><div id="hours-15"></div></td>
-          <td style="text-align: right;"><div id="minutes-15"></div></td>
-        </tr>
-        <tr>
-          <td>16th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-16" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-16" /></td>
-          <td style="text-align: right;"><div id="hours-16"></div></td>
-          <td style="text-align: right;"><div id="minutes-16"></div></td>
-        </tr>
-        <tr>
-          <td>17th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-17" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-17" /></td>
-          <td style="text-align: right;"><div id="hours-17"></div></td>
-          <td style="text-align: right;"><div id="minutes-17"></div></td>
-        </tr>
-        <tr>
-          <td>18th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-18" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-18" /></td>
-          <td style="text-align: right;"><div id="hours-18"></div></td>
-          <td style="text-align: right;"><div id="minutes-18"></div></td>
-        </tr>
-        <tr>
-          <td>19th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-19" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-19" /></td>
-          <td style="text-align: right;"><div id="hours-19"></div></td>
-          <td style="text-align: right;"><div id="minutes-19"></div></td>
-        </tr>
-        <tr>
-          <td>20th</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-20" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-20" /></td>
-          <td style="text-align: right;"><div id="hours-20"></div></td>
-          <td style="text-align: right;"><div id="minutes-20"></div></td>
-        </tr>
-        <tr>
-          <td>21st</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-21" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-21" /></td>
-          <td style="text-align: right;"><div id="hours-21"></div></td>
-          <td style="text-align: right;"><div id="minutes-21"></div></td>
-        </tr>
-        <tr>
-          <td>22rd</td>
-          <td><input style="width: 100%;" type="time" id="input-time-start-22" /></td>
-          <td><input style="width: 100%;" type="time" id="input-time-end-22" /></td>
-          <td style="text-align: right;"><div id="hours-22"></div></td>
-          <td style="text-align: right;"><div id="minutes-22"></div></td>
-        </tr>
-        <tr>
-          <td style="text-align: right;" colspan="3"><button type="button" id="calculate-btn" class="btn btn-success"><span class="glyphicon glyphicon-usd"></span> Calculate & Save </button></td>
-          <td style="text-align: right;">Total Of Hours: <span id="Hourstotal"></span></td>
-          <td style="text-align: right;">Total Of Minutes: </td>
-        </tr>
-        <tr>
-          <td style="text-align: right;">Salary: </td>
-          <td colspan="4"><div id="salary"></div></td>
-        </tr>
-        <tr>
-          <td style="text-align: right;">Salary After Tax: </td>
-          <td colspan="4"><div id="finalsalary"></div></td>
-        </tr>
-      </tbody>
-    </table>
+  <body>
+    <div class="container">
+      <div id="output"></div>
+      <h2>A Payroll Management System</h2>
+      <p>Attendance Sheet Monthly:</p>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered">
+          <thead>
+            <tr>
+              <th style="width: 120px"># Day</th>
+              <th>Start Time:</th>
+              <th>End Time:</th>
+              <th style="text-align: right">Hours</th>
+              <th style="text-align: right">Minutes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1st</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-1"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-1" />
+              </td>
+              <td style="text-align: right"><div id="hours-1"></div></td>
+              <td style="text-align: right"><div id="minutes-1"></div></td>
+            </tr>
+            <tr>
+              <td>2nd</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-2"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-2" />
+              </td>
+              <td style="text-align: right"><div id="hours-2"></div></td>
+              <td style="text-align: right"><div id="minutes-2"></div></td>
+            </tr>
+            <tr>
+              <td>3rd</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-3"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-3" />
+              </td>
+              <td style="text-align: right"><div id="hours-3"></div></td>
+              <td style="text-align: right"><div id="minutes-3"></div></td>
+            </tr>
+            <tr>
+              <td>4th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-4"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-4" />
+              </td>
+              <td style="text-align: right"><div id="hours-4"></div></td>
+              <td style="text-align: right"><div id="minutes-4"></div></td>
+            </tr>
+            <tr>
+              <td>5th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-5"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-5" />
+              </td>
+              <td style="text-align: right"><div id="hours-5"></div></td>
+              <td style="text-align: right"><div id="minutes-5"></div></td>
+            </tr>
+            <tr>
+              <td>6th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-6"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-6" />
+              </td>
+              <td style="text-align: right"><div id="hours-6"></div></td>
+              <td style="text-align: right"><div id="minutes-6"></div></td>
+            </tr>
+            <tr>
+              <td>7th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-7"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-7" />
+              </td>
+              <td style="text-align: right"><div id="hours-7"></div></td>
+              <td style="text-align: right"><div id="minutes-7"></div></td>
+            </tr>
+            <tr>
+              <td>8th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-8"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-8" />
+              </td>
+              <td style="text-align: right"><div id="hours-8"></div></td>
+              <td style="text-align: right"><div id="minutes-8"></div></td>
+            </tr>
+            <tr>
+              <td>9th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-9"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-9" />
+              </td>
+              <td style="text-align: right"><div id="hours-9"></div></td>
+              <td style="text-align: right"><div id="minutes-9"></div></td>
+            </tr>
+            <tr>
+              <td>10th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-10"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-10" />
+              </td>
+              <td style="text-align: right"><div id="hours-10"></div></td>
+              <td style="text-align: right"><div id="minutes-10"></div></td>
+            </tr>
+            <tr>
+              <td>11th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-11"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-11" />
+              </td>
+              <td style="text-align: right"><div id="hours-11"></div></td>
+              <td style="text-align: right"><div id="minutes-11"></div></td>
+            </tr>
+            <tr>
+              <td>12th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-12"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-12" />
+              </td>
+              <td style="text-align: right"><div id="hours-12"></div></td>
+              <td style="text-align: right"><div id="minutes-12"></div></td>
+            </tr>
+            <tr>
+              <td>13th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-13"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-13" />
+              </td>
+              <td style="text-align: right"><div id="hours-13"></div></td>
+              <td style="text-align: right"><div id="minutes-13"></div></td>
+            </tr>
+            <tr>
+              <td>14th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-14"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-14" />
+              </td>
+              <td style="text-align: right"><div id="hours-14"></div></td>
+              <td style="text-align: right"><div id="minutes-14"></div></td>
+            </tr>
+            <tr>
+              <td>15th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-15"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-15" />
+              </td>
+              <td style="text-align: right"><div id="hours-15"></div></td>
+              <td style="text-align: right"><div id="minutes-15"></div></td>
+            </tr>
+            <tr>
+              <td>16th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-16"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-16" />
+              </td>
+              <td style="text-align: right"><div id="hours-16"></div></td>
+              <td style="text-align: right"><div id="minutes-16"></div></td>
+            </tr>
+            <tr>
+              <td>17th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-17"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-17" />
+              </td>
+              <td style="text-align: right"><div id="hours-17"></div></td>
+              <td style="text-align: right"><div id="minutes-17"></div></td>
+            </tr>
+            <tr>
+              <td>18th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-18"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-18" />
+              </td>
+              <td style="text-align: right"><div id="hours-18"></div></td>
+              <td style="text-align: right"><div id="minutes-18"></div></td>
+            </tr>
+            <tr>
+              <td>19th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-19"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-19" />
+              </td>
+              <td style="text-align: right"><div id="hours-19"></div></td>
+              <td style="text-align: right"><div id="minutes-19"></div></td>
+            </tr>
+            <tr>
+              <td>20th</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-20"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-20" />
+              </td>
+              <td style="text-align: right"><div id="hours-20"></div></td>
+              <td style="text-align: right"><div id="minutes-20"></div></td>
+            </tr>
+            <tr>
+              <td>21st</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-21"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-21" />
+              </td>
+              <td style="text-align: right"><div id="hours-21"></div></td>
+              <td style="text-align: right"><div id="minutes-21"></div></td>
+            </tr>
+            <tr>
+              <td>22rd</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="time"
+                  id="input-time-start-22"
+                />
+              </td>
+              <td>
+                <input style="width: 100%" type="time" id="input-time-end-22" />
+              </td>
+              <td style="text-align: right"><div id="hours-22"></div></td>
+              <td style="text-align: right"><div id="minutes-22"></div></td>
+            </tr>
+            <tr>
+              <td style="text-align: right" colspan="3">
+                <button
+                  type="button"
+                  id="calculate-btn"
+                  class="btn btn-success"
+                >
+                  <span class="glyphicon glyphicon-usd"></span> Calculate & Save
+                </button>
+              </td>
+              <td style="text-align: right">
+                Total Of Hours: <span id="Hourstotal"></span>
+              </td>
+              <td style="text-align: right">
+                Total Of Minutes: <span id="Minutestotal"></span>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: right">Salary:</td>
+              <td colspan="4"><div id="salary"></div></td>
+            </tr>
+            <tr>
+              <td style="text-align: right">Salary After Tax:</td>
+              <td colspan="4"><div id="finalsalary"></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
-  
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
